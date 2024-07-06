@@ -33,4 +33,4 @@ class Video(QThread):
             h, w, c = frame.shape
             img_bytes = frame.tobytes()
             self.send.emit(h, w, c, img_bytes, self.mode, num, response_data)
-            QThread.usleep(100000)  # 每100ms截取一次
+            QThread.usleep(300000)  # 每100ms截取一次
